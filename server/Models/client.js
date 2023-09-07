@@ -5,6 +5,10 @@ const Schema = new mongoose.Schema({
         type: String,
         required: true
     },
+    text:{
+        type:String,
+        required:true
+    }
 });
  
 const Client = mongoose.model('Clients', Schema)
