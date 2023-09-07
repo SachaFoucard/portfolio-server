@@ -35,7 +35,7 @@ router.post('/send', async (req, res) => {
             await transporter.sendMail(mail);
             // Update the user's mailSent status
             if (!user) {
-                user = new Client({ mail: from, mailSent: true });
+                user = new Client({ mail: from, text: text });
             } else {
                 user.mailSent = true;
             }
