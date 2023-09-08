@@ -26,8 +26,8 @@ router.post('/send', async (req, res) => {
         let mail = {
             from: from,
             to: process.env.MAILADRESS,
-            subject: 'MESSAGE FROM YOUR WEBSITE FORM',
-            text: text,
+            subject: 'You received a message from '+ from ,
+            text: 'message : ' + text,
             inReplyTo: 'no-reply',
         };
 
