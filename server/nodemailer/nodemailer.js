@@ -3,6 +3,10 @@ const router = require('express').Router();
 const Client = require('../Models/client');
 require('dotenv').config();
 
+router.get('/test', async (req, res) => {
+return res.status(201).json({ message: 'test route worked' });
+}
+
 router.post('/send', async (req, res) => {
     const { from, text } = req.body;
 
